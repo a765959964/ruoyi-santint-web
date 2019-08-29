@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="include :: header('新增个人资料')"/>
+</head>
+<body class="white-bg">
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-userinfo-add">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户ID：</label>
+            <div class="col-sm-8">
+                <input name="userid" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户名：</label>
+            <div class="col-sm-8">
+                <input name="username" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">密码：</label>
+            <div class="col-sm-8">
+                <input name="password" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">支付密码：</label>
+            <div class="col-sm-8">
+                <input name="paypassword" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">头像地址：</label>
+            <div class="col-sm-8">
+                <input name="headaddr" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">昵称：</label>
+            <div class="col-sm-8">
+                <input name="nickname" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">性别1、男2、女：</label>
+            <div class="col-sm-8">
+                <select name="sex" class="form-control m-b">
+                    <option value="">所有</option>
+                </select>
+                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 代码生成请选择字典属性</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">生日：</label>
+            <div class="col-sm-8">
+                <input name="birthday" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">民族：</label>
+            <div class="col-sm-8">
+                <input name="nation" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">口味偏好：</label>
+            <div class="col-sm-8">
+                <input name="tastepre" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">手机：</label>
+            <div class="col-sm-8">
+                <input name="phone" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">成长指：</label>
+            <div class="col-sm-8">
+                <input name="growvalue" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">邮箱：</label>
+            <div class="col-sm-8">
+                <input name="email" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户信息版本号：</label>
+            <div class="col-sm-8">
+                <input name="userinfover" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">多客户端最新版本标示：</label>
+            <div class="col-sm-8">
+                <input name="mutilnewestver" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">null：</label>
+            <div class="col-sm-8">
+                <input name="token" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">标志：1、异常2、正常：</label>
+            <div class="col-sm-8">
+                <select name="falg" class="form-control m-b">
+                    <option value="">所有</option>
+                </select>
+                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 代码生成请选择字典属性</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户IP：</label>
+            <div class="col-sm-8">
+                <input name="userip" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户端口：</label>
+            <div class="col-sm-8">
+                <input name="userport" class="form-control" type="text">
+            </div>
+        </div>
+    </form>
+</div>
+<th:block th:include="include :: footer"/>
+<script type="text/javascript">
+    var prefix = ctx + "santint/userinfo"
+    $("#form-userinfo-add").validate({
+        focusCleanup: true
+    });
+
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.operate.save(prefix + "/add", $('#form-userinfo-add').serialize());
+        }
+    }
+</script>
+</body>
+</html>

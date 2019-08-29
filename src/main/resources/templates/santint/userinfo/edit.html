@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="include :: header('修改个人资料')"/>
+</head>
+<body class="white-bg">
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-userinfo-edit" th:object="${userinfo}">
+        <input name="id" th:field="*{id}" type="hidden">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户ID：</label>
+            <div class="col-sm-8">
+                <input name="userid" th:field="*{userid}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户名：</label>
+            <div class="col-sm-8">
+                <input name="username" th:field="*{username}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">密码：</label>
+            <div class="col-sm-8">
+                <input name="password" th:field="*{password}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">支付密码：</label>
+            <div class="col-sm-8">
+                <input name="paypassword" th:field="*{paypassword}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">头像地址：</label>
+            <div class="col-sm-8">
+                <input name="headaddr" th:field="*{headaddr}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">昵称：</label>
+            <div class="col-sm-8">
+                <input name="nickname" th:field="*{nickname}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">性别1、男2、女：</label>
+            <div class="col-sm-8">
+                <select name="sex" class="form-control m-b">
+                    <option value="">所有</option>
+                </select>
+                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 代码生成请选择字典属性</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">生日：</label>
+            <div class="col-sm-8">
+                <input name="birthday" th:field="*{birthday}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">民族：</label>
+            <div class="col-sm-8">
+                <input name="nation" th:field="*{nation}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">口味偏好：</label>
+            <div class="col-sm-8">
+                <input name="tastepre" th:field="*{tastepre}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">手机：</label>
+            <div class="col-sm-8">
+                <input name="phone" th:field="*{phone}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">成长指：</label>
+            <div class="col-sm-8">
+                <input name="growvalue" th:field="*{growvalue}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">邮箱：</label>
+            <div class="col-sm-8">
+                <input name="email" th:field="*{email}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户信息版本号：</label>
+            <div class="col-sm-8">
+                <input name="userinfover" th:field="*{userinfover}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">多客户端最新版本标示：</label>
+            <div class="col-sm-8">
+                <input name="mutilnewestver" th:field="*{mutilnewestver}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">null：</label>
+            <div class="col-sm-8">
+                <input name="token" th:field="*{token}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">标志：1、异常2、正常：</label>
+            <div class="col-sm-8">
+                <select name="falg" class="form-control m-b">
+                    <option value="">所有</option>
+                </select>
+                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 代码生成请选择字典属性</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户IP：</label>
+            <div class="col-sm-8">
+                <input name="userip" th:field="*{userip}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">用户端口：</label>
+            <div class="col-sm-8">
+                <input name="userport" th:field="*{userport}" class="form-control" type="text">
+            </div>
+        </div>
+    </form>
+</div>
+<th:block th:include="include :: footer"/>
+<script type="text/javascript">
+    var prefix = ctx + "santint/userinfo";
+    $("#form-userinfo-edit").validate({
+        focusCleanup: true
+    });
+
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.operate.save(prefix + "/edit", $('#form-userinfo-edit').serialize());
+        }
+    }
+</script>
+</body>
+</html>

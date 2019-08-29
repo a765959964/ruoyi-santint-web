@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="include :: header('修改菜品')"/>
+</head>
+<body class="white-bg">
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-foodtable-edit" th:object="${foodtable}">
+        <input name="id" th:field="*{id}" type="hidden">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜品ID：</label>
+            <div class="col-sm-8">
+                <input name="foodid" th:field="*{foodid}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">综合：</label>
+            <div class="col-sm-8">
+                <input name="global" th:field="*{global}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">评分：</label>
+            <div class="col-sm-8">
+                <input name="score" th:field="*{score}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">评分次数：</label>
+            <div class="col-sm-8">
+                <input name="scorecount" th:field="*{scorecount}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">销量：</label>
+            <div class="col-sm-8">
+                <input name="sales" th:field="*{sales}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">价格：</label>
+            <div class="col-sm-8">
+                <input name="price" th:field="*{price}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜品图标地址：</label>
+            <div class="col-sm-8">
+                <input name="iconaddress" th:field="*{iconaddress}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜图片地址：</label>
+            <div class="col-sm-8">
+                <input name="imageaddress" th:field="*{imageaddress}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜名：</label>
+            <div class="col-sm-8">
+                <input name="foodname" th:field="*{foodname}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">酸度：</label>
+            <div class="col-sm-8">
+                <input name="sour" th:field="*{sour}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">甜度：</label>
+            <div class="col-sm-8">
+                <input name="sweet" th:field="*{sweet}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">咸度：</label>
+            <div class="col-sm-8">
+                <input name="salty" th:field="*{salty}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">辣度：</label>
+            <div class="col-sm-8">
+                <input name="hot" th:field="*{hot}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">作者名：</label>
+            <div class="col-sm-8">
+                <input name="authorname" th:field="*{authorname}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">作者简介：</label>
+            <div class="col-sm-8">
+                <input name="authorbrief" th:field="*{authorbrief}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">作者图标：</label>
+            <div class="col-sm-8">
+                <input name="authoricon" th:field="*{authoricon}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">作者详情：</label>
+            <div class="col-sm-8">
+                <input name="authordetail" th:field="*{authordetail}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜品简介：</label>
+            <div class="col-sm-8">
+                <input name="foodbrief" th:field="*{foodbrief}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜品详情：</label>
+            <div class="col-sm-8">
+                <input name="fooddetail" th:field="*{fooddetail}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">配菜菜品分类号：</label>
+            <div class="col-sm-8">
+                <input name="matchfoodnum" th:field="*{matchfoodnum}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">搭配菜品ID：</label>
+            <div class="col-sm-8">
+                <input name="matchfoodid" th:field="*{matchfoodid}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜品状态：</label>
+            <div class="col-sm-8">
+                <input name="foodstat" th:field="*{foodstat}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜品详情路径：</label>
+            <div class="col-sm-8">
+                <input name="jsonpath" th:field="*{jsonpath}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">foodtype_id：</label>
+            <div class="col-sm-8">
+                <input name="foodtypeId" th:field="*{foodtypeId}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">0 否 1 是：</label>
+            <div class="col-sm-8">
+                <input name="isdel" th:field="*{isdel}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜系ID：</label>
+            <div class="col-sm-8">
+                <input name="foodCommonId" th:field="*{foodCommonId}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">食材ID：</label>
+            <div class="col-sm-8">
+                <input name="materialId" th:field="*{materialId}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">味型id：</label>
+            <div class="col-sm-8">
+                <input name="tasteId" th:field="*{tasteId}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜系字段：</label>
+            <div class="col-sm-8">
+                <input name="foodtypeField" th:field="*{foodtypeField}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">菜系id：</label>
+            <div class="col-sm-8">
+                <input name="foodcommonId" th:field="*{foodcommonId}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">制作时间：</label>
+            <div class="col-sm-8">
+                <input name="wastetime" th:field="*{wastetime}" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">版本号：</label>
+            <div class="col-sm-8">
+                <input name="version" th:field="*{version}" class="form-control" type="text">
+            </div>
+        </div>
+    </form>
+</div>
+<th:block th:include="include :: footer"/>
+<script type="text/javascript">
+    var prefix = ctx + "santint/foodtable";
+    $("#form-foodtable-edit").validate({
+        focusCleanup: true
+    });
+
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.operate.save(prefix + "/edit", $('#form-foodtable-edit').serialize());
+        }
+    }
+</script>
+</body>
+</html>
